@@ -590,11 +590,6 @@ body {
 
 /* Desktop (1025px en adelante) */
 @media (min-width: 1025px) {
-
-  .hero-section {
-    padding: 8rem 4rem 6rem;
-  }
-
   /* Regla General: 3 Columnas por defecto */
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
