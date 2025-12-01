@@ -178,6 +178,8 @@ body {
 }
 
 .products-section {
+  width: 75%;
+  margin: 0 auto;
   padding: 5rem 2rem;
   background: var(--bg-light);
   align-items: center;
@@ -312,12 +314,15 @@ body {
 }
 
 .contact-section {
-  padding: 5rem 2rem;
+  /* Remove fixed height so content can size naturally on all screens */
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
   background-image: url(Img/Correo.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
+  min-height: 340px;
 }
 
 .contact-section::before {
@@ -340,10 +345,10 @@ body {
 .contact-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  padding: 3rem;
+  padding: 2rem; /* reduced so card fits vertically */
   border-radius: 20px;
   text-align: center;
-  max-width: 600px;
+  max-width: 540px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   transition: var(--transition);
@@ -585,13 +590,18 @@ body {
 
 /* Desktop (1025px en adelante) */
 @media (min-width: 1025px) {
+
+  .hero-section {
+    padding: 8rem 4rem 6rem;
+  }
+
   /* Regla General: 3 Columnas por defecto */
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .img-logo-ars {
-    width: 100%;
+    width: 70%;
     border-radius: 5%;
   }
 
@@ -612,5 +622,21 @@ body {
     margin-right: auto;
     place-items: center;
     justify-content: center;
+  }
+
+  /* Desktop: alejar (reducir) visualmente la tarjeta de contacto en 25% */
+  #contacto .contact-section {
+    padding-top: 6rem; /* empuja la sección hacia abajo un poco */
+    padding-bottom: 4rem;
+  }
+
+  #contacto .contact-card {
+    transform: scale(0.75);
+    transform-origin: center;
+  }
+
+  /* Ajustar hover para mantener una ligera elevación al pasar el cursor */
+  #contacto .contact-card:hover {
+    transform: scale(0.78);
   }
 }
