@@ -147,6 +147,7 @@ body {
 
 .hero-logo {
   margin-bottom: 2rem;
+  margin-top: 1.5rem; /* empujar logo ligeramente hacia abajo */
   animation: pulse 2s infinite;
 }
 
@@ -522,6 +523,12 @@ body {
 
   .hero-content {
     width: 100%;
+  }
+
+  /* Ajuste del logo en móvil para no ocupar demasiado espacio */
+  .hero-logo {
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
   }
   
   .img-logo-ars {
