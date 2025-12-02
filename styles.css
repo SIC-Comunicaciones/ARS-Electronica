@@ -504,11 +504,13 @@ body {
     width: 100%;
     flex-direction: column;
     background: var(--primary-color);
-    padding: 1rem;
+    padding: 0.5rem;
     gap: 0;
     max-height: 0;
     overflow: hidden;
     transition: var(--transition);
+    padding-top: 0;
+    z-index: 1001;
   }
 
   .nav-menu.active {
@@ -517,7 +519,7 @@ body {
   }
 
   .nav-menu li {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     width: 100%;
   }
 
